@@ -6,166 +6,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translate</title>
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
     <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+    rel="stylesheet"
+    />
     <style>
-        body {
-            background: linear-gradient(to right, #1f4e83, #3498db);
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            animation: fadeIn 1.5s ease-in;
-        }
+      body {
+          background: linear-gradient(to right, #1f4e83, #3498db);
+          color: white;
+          font-family: 'Roboto', sans-serif;
+          animation: fadeIn 1.5s ease-in;
+      }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
 
-        .form-select, #swap-btn {
-            width: 180px;
-            transition: transform 0.3s ease-in-out;
-            padding: 8px;
-            border-radius: 8px;
-        }
+      .form-select, #swap-btn {
+          width: 180px;
+          transition: transform 0.3s ease-in-out;
+          padding: 8px;
+          border-radius: 8px;
+      }
 
-        .form-select:hover, #swap-btn:hover {
-            transform: scale(1.05);
-        }
+      .form-select:hover, #swap-btn:hover {
+          transform: scale(1.05);
+      }
 
-        textarea {
-            transition: box-shadow 0.3s ease-in-out;
-            border-radius: 10px;
-            padding: 10px;
-        }
+      textarea {
+          transition: box-shadow 0.3s ease-in-out;
+          border-radius: 10px;
+          padding: 10px;
+      }
 
-        textarea:focus {
-            box-shadow: 0px 0px 12px #ffffff;
-        }
+      textarea:focus {
+          box-shadow: 0px 0px 12px #ffffff;
+      }
 
-        #btn {
-            transition: all 0.3s ease-in-out;
-            background-color: #2ecc71;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: bold;
-        }
+      #btn {
+          transition: all 0.3s ease-in-out;
+          background-color: #2ecc71;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+      }
 
-        #btn:hover {
-            background-color: #27ae60;
-            transform: scale(1.1);
-        }
+      #btn:hover {
+          background-color: #27ae60;
+          transform: scale(1.1);
+      }
 
-        .navbar {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
+      .navbar {
+          background-color: rgba(0, 0, 0, 0.2);
+          padding: 10px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      }
 
-        .container-fluid {
-            text-align: center;
-        }
-    </style>
+      .container-fluid {
+          text-align: center;
+      }
+  </style>
 </head>
 <body>
+
+
     <!-- Navbar -->
-    <nav style="background-color: #1052ec;" class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid my-2">
-            <a class="navbar-brand" href="{% url 'home' %}">Django Translate App</a>
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}"></a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}"></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav style="background-color: #474747;" class="navbar navbar-expand-lg navbar-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid my-2">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="{% url 'home' %}">Django Translate App</a>
+  
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Contact</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
 
-    <!-- Textarea for user input and translation -->
-    <div class="row container-fluid mt-5">
-        <div align="center" class="d-inline-block my-3">
-            <form id="translate-form" method="post">
-                {% csrf_token %}
-                <p class="d-inline">Choose Language</p>
-                <select class="form-select d-inline me-4" required name="fromlanguage">
-                    <option value="fr">French</option>
-                    <option value="es">Spanish</option>
-                    <option value="de">German</option>
-                    <option value="it">Italian</option>
-                    <option value="en" selected>English</option>
-                    <option value="zh">Chinese</option>
-                    <option value="ig">Igbo</option>
-                    <option value="yo">Yoruba</option>
-                    <option value="hi">Hindi</option>
-                </select>
-                <span class="d-inline"><i class="fas fa-language fa-3x"></i></span>
-                <select class="form-select d-inline ms-4" required name="tolanguage">
-                    <option value="fr">French</option>
-                    <option value="es">Spanish</option>
-                    <option value="de">German</option>
-                    <option value="it">Italian</option>
-                    <option value="en">English</option>
-                    <option value="zh">Chinese</option>
-                    <option value="ig">Igbo</option>
-                    <option value="yo">Yoruba</option>
-                    <option value="hi" selected>Hindi</option>
-                </select>
-                <p class="d-inline">Choose Language</p>
-            </form>
+        <!-- Textarea 8 rows height -->
+<div class="row container-fluid mt-5">
+    <div align="center" class="d-inline-block my-3">
+        <form class="" method="post">
+            {% csrf_token %}
+        <p class=" d-inline">Choose Language </p>
+        <select class="form-select d-inline me-4" required name="fromlanguage">
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="en" selected>English</option>
+            <option value="zh">Chinese</option>
+            <option value="ig">Igbo</option>
+            <option value="yo">Yoruba</option>
+            <option value="hi">Hindi</option>
+          </select>
+        <span class="d-inline"><i class="fas fa-language fa-3x"></i></span>
+        <select class="form-select d-inline ms-4" required name="tolanguage">
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="en">English</option>
+            <option value="zh">Chinese</option>
+            <option value="ig">Igbo</option>
+            <option value="yo">Yoruba</option>
+            <option value="hi" selected>Hindi</option>    
+          </select>
+          <p class=" d-inline">Choose Language </p>
+    </div>
+    <div class="col-6">
+        <div class="form-outline inline-block">
+            <textarea onChange="" id="translate" name="translate" class="form-control" rows="8"></textarea>
+            <label class="form-label" for="textAreaExample2">Enter Text</label>
         </div>
-
+        <button id="btn" type="submit" class="btn btn-dark mt-3">
+            Submit
+          </button>
+        </form>
+        </div>
         <div class="col-6">
             <div class="form-outline inline-block">
-                <textarea id="translate" style="background-color: #ffffff;" name="translate" class="form-control" rows="8">{{ text_to_translate }}</textarea>
-                <label class="form-label" for="textAreaExample2">Enter Text</label>
+                <textarea style="background-color: #ffffff;" id="formControlReadonly" class="form-control" rows="8" readonly>{% if translation %}{{translation}}{% endif %}</textarea>
+                <label class="form-label" for="textAreaExample2">Translation</label>
             </div>
-            <button id="btn" type="submit" class="btn btn-dark mt-3" onclick="submitForm()">
-                Submit
-            </button>
-        </div>
-
-        <div class="col-6">
-            <div class="form-outline inline-block">
-                <textarea id="translatedText" class="form-control" rows="8" readonly>
-                    {% if translation %}
-                        {{ translation }}
-                    {% endif %}
-                </textarea>
-            </div>
-        </div>
+        </div> 
     </div>
 
-    <script>
-        // Function to handle form submission and fetch translation dynamically
-        function submitForm() {
-            var form = document.getElementById('translate-form');
-            var formData = new FormData(form);
 
-            fetch('/translate/', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRFToken': '{{ csrf_token }}',
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Update translated text field
-                document.getElementById('translatedText').value = data.translated_text;
-                // Keep the input text intact
-                document.getElementById('translate').value = formData.get('translate');
-            })
-            .catch(error => console.error('Error:', error));
-        }
-    </script>
 
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+ <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+></script>
 </body>
 </html>
