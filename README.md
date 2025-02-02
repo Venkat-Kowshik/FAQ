@@ -5,7 +5,22 @@ Ensure you have **Python** installed on your system before proceeding.
 
 ## 🚀 Installation Steps
 
-### 1️⃣ Create a Virtual Environment  
+### 1️⃣ Clone the Repository  
+You can clone the repository using HTTPS or SSH:
+
+#### Clone using HTTPS:
+```sh
+git clone https://github.com/Venkat-Kowshik/FAQ.git  
+cd FAQ  
+```
+
+#### Clone using SSH:
+```sh
+git clone git@github.com:Venkat-Kowshik/FAQ.git  
+cd FAQ  
+```
+
+### 2️⃣ Create a Virtual Environment  
 Before installing dependencies, it is recommended to create a virtual environment:
 
 ```sh
@@ -14,19 +29,19 @@ source venv/bin/activate  # On macOS/Linux
 venv\Scripts\activate  # On Windows  
 ```
 
-### 2️⃣ Install Django & Translate Package  
+### 3️⃣ Install Django & Translate Package  
 ```sh
 pip install django translate  
 ```
 
-### 3️⃣ Create & Setup Django Project  
+### 4️⃣ Create & Setup Django Project  
 ```sh
 django-admin startproject translator  
 cd translator  
 python manage.py startapp app  
 ```
 
-### 4️⃣ Add the App to INSTALLED_APPS  
+### 5️⃣ Add the App to INSTALLED_APPS  
 Modify **settings.py**:  
 
 ```python
@@ -41,7 +56,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-### 5️⃣ Run the Server  
+### 6️⃣ Run the Server  
 Once everything is set up, start the Django server:  
 
 ```sh
